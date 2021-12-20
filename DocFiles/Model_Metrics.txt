@@ -1,0 +1,85 @@
+Class Imbalance
+sample_weights = compute_sample_weight(
+    class_weight='balanced',
+    y=y_train
+)
+
+Parameters
+{'objective':'multi:softmax',
+ 'seed':123,
+ 'verbosity':0,
+ 'use_label_encoder':False
+}
+
+Hyper-Parameters
+{'xgb_model__subsample': 0.80,
+ 'xgb_model__reg_lambda': 9,
+ 'xgb_model__n_estimators': 404,
+ 'xgb_model__min_child_weight': 15,
+ 'xgb_model__max_depth': 6,
+ 'xgb_model__learning_rate': 0.05,
+ 'xgb_model__gamma': 1,
+ 'xgb_model__colsample_bytree': 0.76}
+
+Features
+['Patient_Age',
+ 'Mother_Gene',
+ 'Father_Gene',
+ 'Maternal_Gene',
+ 'Paternal_Gene',
+ 'Blood_Cell',
+ 'Respiratory_Rate',
+ 'Heart_Rate',
+ 'Follow_Up',
+ 'Gender',
+ 'Birth_Asphyxia',
+ 'Birth_Place',
+ 'Folic_Acid_Details',
+ 'Maternal_Illness',
+ 'Radiation_Exposure',
+ 'Substance_Abuse',
+ 'Assisted_Conception',
+ 'History_Pregnancies',
+ 'Previous_Abortions',
+ 'Birth_Defects',
+ 'White_Blood_Cell',
+ 'Blood_Test',
+ 'Symptom_1',
+ 'Symptom_2',
+ 'Symptom_3',
+ 'Symptom_4',
+ 'Symptom_5',
+ 'Father_Patient_Birth_Age',
+ 'Mother_Patient_Birth_Age',
+ 'Status_Birth_Defect']
+
+
+Final Model CV Score
+Scores: [39.44263118 38.41325634 41.30052724 39.49284459 39.76901833]
+Mean: 39.68365553602812
+Standard Deviation: 0.009305886944101354
+
+
+Final Model CV F1_Macro Score
+F1_Macro Scores: [30.3439153  30.44573292 33.66749274 28.9768262  30.79848362]
+F1_Macro Scores Mean: 30.84649015461317
+F1_Macro Scores Standard Deviation: 0.015407265425193044
+
+
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.85      0.30      0.45       152
+           1       0.71      0.30      0.42        97
+           2       0.73      0.82      0.77      3448
+           3       0.82      0.67      0.74      1817
+           4       0.77      0.60      0.67      1355
+           5       0.82      0.51      0.63       648
+           6       0.73      0.78      0.75      5160
+           7       0.73      0.78      0.75      4405
+           8       0.74      0.69      0.71      2833
+
+    accuracy                           0.74     19915
+   macro avg       0.76      0.61      0.66     19915
+weighted avg       0.74      0.74      0.74     19915
+
